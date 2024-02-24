@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Exclude raw directory containing service account key
+/app/src/main/res/raw/
