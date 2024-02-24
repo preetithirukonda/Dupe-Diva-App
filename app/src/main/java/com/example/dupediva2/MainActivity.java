@@ -1,6 +1,13 @@
 package com.example.dupediva2;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+        final Button loginButton = findViewById(R.id.Login);
+        loginButton.setBackgroundColor(Color.parseColor("#F8C7C6"));
+      //  EditText e1 = (EditText) findViewById(R.id.textView);//Make Sure that this is EditText or TextView
+    //    EditText e2 = (EditText) findViewById(R.id.textView2);
+      //  TextView t1 = (EditText) findViewById(R.id.textView3);
+        //int num1 = Integer.parseInt(e1.getText().toString());
+        //int num2 = Integer.parseInt(e2.getText().toString());
+       // int sum = num1 + num2;
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+          //      t1.setText(Integer.toString(sum));
+            }
+        });
     }
+
 
 }
