@@ -1,5 +1,7 @@
 package com.example.dupediva2;
 
+import android.util.Log;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,20 +30,23 @@ public class ParseJSON {
         }
 
         while(in.hasNextLine()) {
+        //    Log.d("seeing lines", "yes");
             String line = in.nextLine();
-            if(line.contains("Filter")) {
-                break;
-            }
+            Log.d("seeing after filter", "yes");
             if(line.contains("\"title\": ")){
+                Log.d("seeing title", "yes");
                 title.add(line.substring(22, (line.length() - 2)));
             }
             if(line.contains("\"link\": ")) {
+                Log.d("seeing link", "yes");
                 link.add(line.substring(21, (line.length() - 2)));
             }
             if(line.contains("\"price\": ")){
+                Log.d("seeing price", "yes");
                 price.add(line.substring(22, (line.length() - 2)));
             }
             if(line.contains("\"thumbnail\": ")) {
+                Log.d("seeing thumbnail", "yes");
                 thumbnail.add(line.substring(26, (line.length() - 2)));
             }
         }
