@@ -12,6 +12,7 @@ public class ParseJSON {
     private ArrayList<String> price;
     private ArrayList<String> thumbnail;
 
+    public String file;
     public ParseJSON(String file) throws IOException {
         title = new ArrayList<>();
         link = new ArrayList<>();
