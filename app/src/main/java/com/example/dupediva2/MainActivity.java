@@ -1,6 +1,8 @@
 package com.example.dupediva2;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,9 +20,12 @@ import com.google.auth.Credentials;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.vision.v1.AnnotateImageRequest;
 import com.google.cloud.vision.v1.AnnotateImageResponse;
+import com.google.cloud.vision.v1.EntityAnnotation;
+import com.google.cloud.vision.v1.FaceAnnotation;
 import com.google.cloud.vision.v1.Image;
 import com.google.cloud.vision.v1.ImageAnnotatorClient;
 import com.google.cloud.vision.v1.ImageAnnotatorSettings;
+import com.google.cloud.vision.v1.LocalizedObjectAnnotation;
 import com.google.protobuf.ByteString;
 
 import java.io.IOException;
@@ -72,20 +77,21 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        final Button analyzeButton = findViewById(R.id.analyzeButton);
         // Example: Perform image analysis when a button is clicked
-        binding.analyzeButton.setOnClickListener(view -> {
-            // Convert image to ByteString
-            ByteString imageBytes = getImageBytesFromImageView(imageView);
+        analyzeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ByteString imageBytes = getImageBytesFromImageView(imageView);
 
-            // Perform image analysis
-            performImageAnalysis(imageBytes);
+                // Perform image analysis
+                performImageAnalysis(imageBytes);
+            }
         });
-    }
 
     private ByteString getImageBytesFromImageView(ImageView imageView) {
         // In a real app, you would convert the image in the ImageView to a ByteString
         // For demonstration purposes, this method just returns an empty ByteString
-        return ByteString.EMPTY;
+        //return ByteString.EMPTY;
     }
 
     private void performImageAnalysis(ByteString imageBytes) {
@@ -110,9 +116,50 @@ public class MainActivity extends AppCompatActivity {
             throw e;
         }
     }
-
     private void processImageAnalysisResponses(List<AnnotateImageResponse> responses) {
-        // Process the responses here and update the UI accordingly
+        if (responses.isEmpty()) {
+            Toast.makeText(this, "No analysis results found", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // Process each response
+        for (AnnotateImageResponse response : responses) {
+            // Extract relevant information from the response
+            List<EntityAnnotation> labels = response.getLabelAnnotationsList();
+            List<LocalizedObjectAnnotation> objects = response.getLocalizedObjectAnnotationsList();
+            List<FaceAnnotation> faces = response.getFaceAnnotationsList();
+
+            // Update the UI accordingly based on the extracted information
+            if (!labels.isEmpty()) {
+                // Update UI to display labels
+                StringBuilder labelStringBuilder = new StringBuilder("Labels:\n");
+                for (EntityAnnotation label : labels) {
+                    labelStringBuilder.append(label.getDescription()).append("\n");
+                }
+                // Example: textView.setText(labelStringBuilder.toString());
+            }
+
+            if (!objects.isEmpty()) {
+                // Update UI to display localized objects
+                StringBuilder objectStringBuilder = new StringBuilder("Objects:\n");
+                for (LocalizedObjectAnnotation object : objects) {
+                    objectStringBuilder.append(object.getName()).append("\n");
+                }
+                // Example: textView.setText(objectStringBuilder.toString());
+            }
+
+            if (!faces.isEmpty()) {
+                // Update UI to display faces
+                StringBuilder faceStringBuilder = new StringBuilder("Faces:\n");
+                for (FaceAnnotation face : faces) {
+                    // You can extract information like face bounds, emotions, etc.
+                    faceStringBuilder.append("Face bounds: ").append(face.getBoundingPoly()).append("\n");
+                    // Example: faceStringBuilder.append("Joy likelihood: ").append(face.getJoyLikelihood()).append("\n");
+                }
+                // Example: textView.setText(faceStringBuilder.toString());
+            }
+
+            // Add more logic to process other types of annotations as needed
+        }
     }
 
     @Override
