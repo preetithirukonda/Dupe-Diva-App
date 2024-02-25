@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dupediva2.MainActivity2;
 import com.example.dupediva2.R;
 import com.example.dupediva2.ui.login.LoginViewModel;
 import com.example.dupediva2.ui.login.LoginViewModelFactory;
@@ -122,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         });
+
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
