@@ -14,7 +14,7 @@ public class ParseJSON {
     private ArrayList<String> price;
     private ArrayList<String> thumbnail;
 
-    private ArrayList<Integer> intPrice;
+    private ArrayList<Double> intPrice;
 
     public String file;
     public ParseJSON(String file) throws IOException {
@@ -48,8 +48,10 @@ public class ParseJSON {
                 thumbnail.add(line.substring(19, (line.length() - 2)));
             }
             if(line.contains("\"extracted_price\"")){
-                intPrice.add(parseInt(line.substring(25, (line.length() - 2))));
+                Scanner scnr = new Scanner(line);
 
+                intPrice.add(scnr.nextDouble());
+                scnr.close();
             }
         }
 
@@ -72,5 +74,5 @@ public class ParseJSON {
         return thumbnail;
     }
 
-    public ArrayList<Integer> getIntPrice(){ return intPrice; }
+    public ArrayList<Double> getIntPrice(){ return intPrice; }
 }

@@ -11,7 +11,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -38,7 +37,7 @@ public class Results extends AppCompatActivity {
         ArrayList<String> link = new ArrayList<>();
         ArrayList<String> price = new ArrayList<>();
         ArrayList<String> thumbnail = new ArrayList<>();
-        ArrayList<Integer> intPrice = new ArrayList<>();
+        ArrayList<Double> intPrice = new ArrayList<>();
         try {
             ParseJSON data = new ParseJSON(filePath);
             title = data.getTitle();
@@ -203,10 +202,9 @@ public class Results extends AppCompatActivity {
 
     }
 
-    public static void organizePrice(ArrayList<Integer> price) {
+    public static void organizePrice(ArrayList<Double> price) {
         for (int i = 0; i < price.size(); i++) {
-            Log.d("INTPRICE", Integer.toString(
-                    price.get(i)));
+            System.out.print(price.get(i));
         }
     }
 
