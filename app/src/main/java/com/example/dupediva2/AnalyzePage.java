@@ -60,7 +60,8 @@ public class AnalyzePage extends AppCompatActivity {
                 Gson gson = new Gson();
 
                 String apiKey = "b648ab9051dae38edb8a8e7ec05fd30e0e9b5b9bc4f58fa8ebc46f54bb57083b";
-                String searchQuery = "grey-denim-pants";
+             //   String searchQuery = "grey-denim-pants";
+                String searchQuery = "light-purple-wool-sweater";
                 String apiUrl = "https://serpapi.com/search.json?engine=google_shopping&api_key=" + apiKey + "&q=" + searchQuery;
 
                 try {
