@@ -50,5 +50,6 @@ dependencies {
     }
     implementation("com.google.code.gson:gson:2.10")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.16.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
 
 }

@@ -21,28 +21,26 @@ public class ParseJSON {
 
         Scanner in = new Scanner(new FileInputStream(file));
 
-        in.useDelimiter("\"");
-
         while(!in.nextLine().contains("shopping_results")){
             in.nextLine();
         }
 
         while(in.hasNextLine()) {
             String line = in.nextLine();
-            if(line.contains("Filter")) {
+            if(line.contains("categories")) {
                 break;
             }
-            if(line.contains("\"title\": ")){
-                title.add(line.substring(22, (line.length() - 2)));
+            if(line.contains("\"title\"")){
+                title.add(line.substring(15, (line.length() - 2)));
             }
-            if(line.contains("\"link\": ")) {
-                link.add(line.substring(21, (line.length() - 2)));
+            if(line.contains("\"link\"")) {
+                link.add(line.substring(14, (line.length() - 2)));
             }
-            if(line.contains("\"price\": ")){
-                price.add(line.substring(22, (line.length() - 2)));
+            if(line.contains("\"price\"")){
+                price.add(line.substring(15, (line.length() - 2)));
             }
-            if(line.contains("\"thumbnail\": ")) {
-                thumbnail.add(line.substring(26, (line.length() - 2)));
+            if(line.contains("\"thumbnail\"")) {
+                thumbnail.add(line.substring(19, (line.length() - 2)));
             }
         }
 
