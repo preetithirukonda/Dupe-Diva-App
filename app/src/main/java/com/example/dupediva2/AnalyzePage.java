@@ -2,6 +2,8 @@ package com.example.dupediva2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -25,7 +27,8 @@ import java.net.URL;
 
 public class AnalyzePage extends AppCompatActivity {
     ImageView imageView;
-   static Uri uri;private Button search;
+    static Uri uri;
+    private Button search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,7 @@ public class AnalyzePage extends AppCompatActivity {
     public static void setImage(Uri img) {
         uri = img;
     }
+
     public void searchShopping() {
         new Thread(new Runnable() {
             @Override
@@ -73,10 +77,12 @@ public class AnalyzePage extends AppCompatActivity {
                     in.close();
 
                     final String jsonResponse = response.toString();
+                    final String newJson = jSonReformat(jsonResponse);
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            writeJsonToFile(jsonResponse);
+                            writeJsonToFile(newJson);
                         }
                     });
                 } catch (IOException e) {
@@ -97,6 +103,21 @@ public class AnalyzePage extends AppCompatActivity {
             }
         } else {
             Toast.makeText(AnalyzePage.this, "Error fetching JSON data from API", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public String jSonReformat(String uglyString) {
+
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Object jsonObject = objectMapper.readValue(uglyString, Object.class);
+            String prettyJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject);
+            return prettyJson;
+        } catch (Exception e) {
+            Log.d("JACKSON", "DIDNT WORK");
+            return uglyString;
+
         }
     }
 
