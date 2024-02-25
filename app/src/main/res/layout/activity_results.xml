@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Displaying 10 of -- search results"
+        android:text="Displaying 10 search results"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,17 +36,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton6"
+                    android:id="@+id/imageButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext6"
+                    android:id="@+id/scrolltext1"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 1" />
             </LinearLayout>
 
             <LinearLayout
@@ -55,17 +55,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton5"
+                    android:id="@+id/imageButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext5"
+                    android:id="@+id/scrolltext2"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 2" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,17 +74,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton1"
+                    android:id="@+id/imageButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext1"
+                    android:id="@+id/scrolltext3"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 3" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,17 +93,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/imageButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext2"
+                    android:id="@+id/scrolltext4"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 4" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,17 +112,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/imageButton5"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext3"
+                    android:id="@+id/scrolltext5"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 5" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,19 +131,95 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton4"
+                    android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
                     android:layout_height="121dp"
                     android:layout_weight="1"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
 
                 <TextView
-                    android:id="@+id/scrolltext4"
+                    android:id="@+id/scrolltext6"
                     android:layout_width="191dp"
                     android:layout_height="117dp"
-                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+                    android:text="Sample Product Title 6" />
+
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
+
+                <TextView
+                    android:id="@+id/scrolltext7"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="Sample Product Title 7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
+
+                <TextView
+                    android:id="@+id/scrolltext8"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="Sample Product Title 8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
+
+                <TextView
+                    android:id="@+id/scrolltext9"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="Sample Product Title 9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/screenshot_2024_02_25_at_11_00_47am" />
+
+                <TextView
+                    android:id="@+id/scrolltext10"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="Sample Product Title 10" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
