@@ -38,6 +38,7 @@ public class AnalyzePage extends AppCompatActivity {
         imageView = findViewById(R.id.finalImage);
         imageView.setImageURI(uri);
         search = findViewById(R.id.searchButton);
+        Results.setImage(uri);
 
         search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
