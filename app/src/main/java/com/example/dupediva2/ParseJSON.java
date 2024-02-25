@@ -1,5 +1,7 @@
 package com.example.dupediva2;
 
+import static java.lang.Integer.parseInt;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,12 +14,15 @@ public class ParseJSON {
     private ArrayList<String> price;
     private ArrayList<String> thumbnail;
 
+    private ArrayList<Integer> intPrice;
+
     public String file;
     public ParseJSON(String file) throws IOException {
         title = new ArrayList<>();
         link = new ArrayList<>();
         price = new ArrayList<>();
         thumbnail = new ArrayList<>();
+        intPrice  = new ArrayList<>();
 
         Scanner in = new Scanner(new FileInputStream(file));
 
@@ -42,6 +47,10 @@ public class ParseJSON {
             if(line.contains("\"thumbnail\"")) {
                 thumbnail.add(line.substring(19, (line.length() - 2)));
             }
+            if(line.contains("\"extracted_price\"")){
+                intPrice.add(parseInt(line.substring(25, (line.length() - 2))));
+
+            }
         }
 
         in.close();
@@ -62,4 +71,6 @@ public class ParseJSON {
     public ArrayList<String> getThumbnail(){
         return thumbnail;
     }
+
+    public ArrayList<Integer> getIntPrice(){ return intPrice; }
 }
