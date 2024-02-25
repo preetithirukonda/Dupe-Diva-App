@@ -20,12 +20,12 @@
         app:navGraph="@navigation/mobile_navigation" />
 
     <Button
-        android:id="@+id/Login"
+        android:id="@+id/Welcome_User"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#F8C7C6"
         android:backgroundTint="#F8C7C6"
-        android:text="Login"
+        android:text="Welcome_User"
         android:textColor="#F8C7C6"
         app:iconTint="#F8C7C6"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
