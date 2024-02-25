@@ -18,11 +18,13 @@ import java.util.ArrayList;
 import com.squareup.picasso.Picasso;
 
 public class Results extends AppCompatActivity {
-
+    static Uri uri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+        ImageView img = findViewById(R.id.searchedImage);
+        img.setImageURI(uri);
         //      TextView textView = (TextView) findViewById(R.id.scrolltext1);
         //    textView.setText("hi");
         String filePath = "/data/user/0/com.example.dupediva2/files/output.json"; // Use the actual path
@@ -191,5 +193,8 @@ public class Results extends AppCompatActivity {
         });
 
 
+    }
+    public static void setImage(Uri img) {
+        uri = img;
     }
 }
