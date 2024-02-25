@@ -1,5 +1,7 @@
 package com.example.dupediva2;
 
+import static java.lang.Character.isDigit;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -37,15 +39,14 @@ public class Results extends AppCompatActivity {
         ArrayList<String> link = new ArrayList<>();
         ArrayList<String> price = new ArrayList<>();
         ArrayList<String> thumbnail = new ArrayList<>();
-        ArrayList<Double> intPrice = new ArrayList<>();
+
         try {
             ParseJSON data = new ParseJSON(filePath);
             title = data.getTitle();
             link = data.getLink();
             price = data.getPrice();
             thumbnail = data.getThumbnail();
-            intPrice = data.getIntPrice();
-            organizePrice(intPrice);
+            organizePrice(price);
             try {
                 Log.d("GOOD DATA OUTPUT", data.getTitle().get(0));
             } catch (Exception e) {
@@ -202,10 +203,19 @@ public class Results extends AppCompatActivity {
 
     }
 
-    public static void organizePrice(ArrayList<Double> price) {
+    public static void organizePrice(ArrayList<String> price) {
+        double nPrice = -1;
         for (int i = 0; i < price.size(); i++) {
-            System.out.print(price.get(i));
+            for (int j = 0; j < price.get(i).length(); j++) {
+                if (isDigit(price.get(i).charAt(j))) {
+                    nPrice = Double.parseDouble(price.get(i).substring(j));
+                }
+                Log.d("double", Double.toString(nPrice));
+
+            }
+
         }
+
     }
 
     public static void setImage(Uri img) {
