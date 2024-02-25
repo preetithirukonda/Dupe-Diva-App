@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Results">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Displaying 10 of -- search results"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="415dp"
+        android:layout_height="547dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext6"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext5"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext1"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="129dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext2"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext3"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/btn_star" />
+
+                <TextView
+                    android:id="@+id/scrolltext4"
+                    android:layout_width="191dp"
+                    android:layout_height="117dp"
+                    android:text="ScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScrollScroll" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

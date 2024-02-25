@@ -23,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dupediva2.MainActivity;
 import com.example.dupediva2.MainActivity2;
 import com.example.dupediva2.R;
 import com.example.dupediva2.ui.login.LoginViewModel;
@@ -82,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Complete and destroy login activity once successful
                 finish();
+
             }
         });
 
@@ -122,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+
             }
         });
 

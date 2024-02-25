@@ -20,7 +20,7 @@
         app:navGraph="@navigation/mobile_navigation" />
 
     <Button
-        android:id="@+id/Login"
+        android:id="@+id/myAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#F8C7C6"
@@ -60,10 +60,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="215dp"
-        android:layout_height="373dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="280dp"
+        android:layout_height="426dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/screenshot_2024_02_24_at_11_57_57am" />

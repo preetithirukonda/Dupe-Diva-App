@@ -29,6 +29,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -47,4 +48,5 @@ dependencies {
     configurations.implementation{
         exclude("org.jetbrains.kotlin", ("kotlin-stdlib-jdk8"))
     }
+    implementation("com.google.code.gson:gson:2.10")
 }
