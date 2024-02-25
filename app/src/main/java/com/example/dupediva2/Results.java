@@ -2,8 +2,12 @@ package com.example.dupediva2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,19 +49,91 @@ public class Results extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-        //#2
-        TextView textView2 = (TextView) findViewById(R.id.scrolltext2);
-        textView2.setText(title.get(0));
-        ImageView imageView2 = findViewById(R.id.imageButton2);
-        String imageUrl2 = "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSGtwdSkRi9dFyVPN9LYFxC_QFfbhpsLp8OcaRsEQcBcHi0HHaRX-6elzpx4Z2HsehJ9KlNEVCxNbp0GFputFg69Cq3XcKjjEr4u4xcv_xLeyhU3lCMBaJssA&usqp=CAE";
-        Picasso.get().load(imageUrl2).into(imageView2);
-
-        System.out.println(title.get(0));
-        System.out.println(link.get(0));
-        System.out.println(price.get(0));
-        System.out.println(thumbnail.get(0));
-
+        //#1
         TextView textView = (TextView) findViewById(R.id.scrolltext1);
-        textView.setText(title.get(0));
+        textView.setText( title.get(0) + "\n" + price.get(0));
+        ImageView imageView = findViewById(R.id.imageButton1);
+        String imageUrl = thumbnail.get(0);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b1 = findViewById(R.id.imageButton1);
+        ArrayList<String> finalLink = link;
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(0)));
+                startActivity(browserIntent);
+            }
+        });
+
+        //#2
+        TextView textView1 = (TextView) findViewById(R.id.scrolltext2);
+        textView.setText( title.get(1) + "\n" + price.get(1));
+        ImageView imageView1 = findViewById(R.id.imageButton2);
+        String imageUrl1 = thumbnail.get(1);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b2 = findViewById(R.id.imageButton2);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(1)));
+                startActivity(browserIntent1);
+            }
+        });
+
+        //#3
+        TextView textView2 = (TextView) findViewById(R.id.scrolltext3);
+        textView.setText( title.get(2) + "\n" + price.get(2));
+        ImageView imageView2 = findViewById(R.id.imageButton3);
+        String imageUrl2 = thumbnail.get(2);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b3 = findViewById(R.id.imageButton3);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(2)));
+                startActivity(browserIntent2);
+            }
+        });
+
+        //#2
+        TextView textView3 = (TextView) findViewById(R.id.scrolltext4);
+        textView.setText( title.get(3) + "\n" + price.get(3));
+        ImageView imageView3 = findViewById(R.id.imageButton4);
+        String imageUrl3 = thumbnail.get(3);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b4 = findViewById(R.id.imageButton4);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent3 = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(3)));
+                startActivity(browserIntent3);
+            }
+        });
+
+        //#3
+        TextView textView4 = (TextView) findViewById(R.id.scrolltext5);
+        textView.setText( title.get(4) + "\n" + price.get(4));
+        ImageView imageView4 = findViewById(R.id.imageButton5);
+        String imageUrl4 = thumbnail.get(2);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b5 = findViewById(R.id.imageButton5);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent4 = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(4)));
+                startActivity(browserIntent4);
+            }
+        });
+
+        //#2
+        TextView textView5 = (TextView) findViewById(R.id.scrolltext6);
+        textView.setText( title.get(5) + "\n" + price.get(5));
+        ImageView imageView5 = findViewById(R.id.imageButton6);
+        String imageUrl5 = thumbnail.get(5);
+        Picasso.get().load(imageUrl).into(imageView);
+        ImageButton b6 = findViewById(R.id.imageButton6);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent browserIntent5 = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLink.get(5)));
+                startActivity(browserIntent5);
+            }
+        });
+
+
     }
 }
